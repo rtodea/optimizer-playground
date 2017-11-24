@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
+import { CookieService } from 'ng2-cookies';
 
 @NgModule({
   imports: [
@@ -10,6 +11,11 @@ import { RouterModule } from '@angular/router';
   ],
   exports: [
   ],
-  declarations: [HomeComponent]
+  declarations: [
+    HomeComponent
+  ],
+  providers: [
+    CookieService
+  ],
 })
 export class CoreModule { }
