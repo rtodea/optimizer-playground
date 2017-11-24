@@ -7,7 +7,9 @@ import { Angulartics2GoogleAnalytics } from 'angulartics2';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics) {
-    console.log('setting up analytics...', angulartics2GoogleAnalytics);
+  constructor(private angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics) {
+    if (!this.angulartics2GoogleAnalytics) {
+      console.log('init process failed for Google Analytics');
+    }
   }
 }

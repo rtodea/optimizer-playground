@@ -20,11 +20,13 @@ const ROUTES: Routes = [
     DetailsModule,
     BrowserModule,
     RouterModule.forRoot(ROUTES),
-
-    // added to imports
     Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
   ],
-  declarations: [AppComponent],
-  bootstrap: [AppComponent],
+  declarations: [
+    AppComponent,
+  ],
+  bootstrap: [
+    AppComponent,
+  ],
 })
 export class AppModule { }

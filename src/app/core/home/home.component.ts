@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CookieService } from 'ng2-cookies';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +7,9 @@ import { CookieService } from 'ng2-cookies';
 })
 export class HomeComponent implements OnInit {
   title = 'app';
-  cookieInfo = '';
 
-  constructor(private cookieService: CookieService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.cookieInfo = JSON.stringify(this.cookieService.get('_gaexp'));
   }
 }
